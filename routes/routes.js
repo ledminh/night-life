@@ -26,7 +26,7 @@ module.exports = (app, express, passport) => {
       if(err)
         throw err;
 
-      data.yelp.search({location: req.body})
+      data.yelp.search({location: req.body, term: "food"})
       .then((yelpData) => {
 
         var restaurantID = [], results = [];
